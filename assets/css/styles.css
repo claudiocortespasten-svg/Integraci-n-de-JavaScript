@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+}
+
+/* MOBILE FIRST: 1 columna base */
+.contenedor {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 20px;
+   }
+
+main {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Flexbox lista mobile */
+section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+section li {
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* TABLET: desde 768px - 2 columnas */
+@media (min-width: 768px) {
+    .contenedor {
+        grid-template-columns: 2fr 1fr !important;
+    }
+    
+    section ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    section li {
+        flex: 1 1 45%;
+    }
+}
+
+/* DESKTOP: desde 1024px - 3fr 1fr */
+@media (min-width: 1024px) {
+    .contenedor {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 3fr 1fr !important;
+    }
+}
+#btn-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 20px;
+    font-size: 18px;
+    background: #2563eb;
+    color:white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    display: none; /* Oculto por defecto */
+}
+#btn-arriba:hover {
+    transform: scale(1.1);
+}
