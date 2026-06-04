@@ -1,0 +1,5 @@
+git --version	Muestra la versión instalada de Git					git --version :sirve para ver si está instalado.
+git init	Inicializa un repositorio en la carpeta actual				git init: nuestro primer paso para trabajar
+git add	Agrega cambios al área de preparación (staging)					git add . (agrega todos los archivos)
+git commit	Registra los cambios con un mensaje descriptivo	 git commit -m "Primer commit" Es para crear el nombre de nuestra versión de la rama
+git status	Muestra el estado del repositorio					git status nos ayuda el revisar el proceso en una lista
